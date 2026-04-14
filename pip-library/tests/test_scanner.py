@@ -30,7 +30,6 @@ STATIC_URL = '/static/'
     (media / 'images').mkdir(parents=True)
     (media / 'images' / 'logo.png').write_bytes(b'fake png')
     (media / 'images' / 'banner.jpg').write_bytes(b'fake jpg')
-    (media / 'documents' / 'report.pdf').mkdir(parents=True)
     (media / 'documents').mkdir(exist_ok=True)
     (media / 'documents' / 'report.pdf').write_bytes(b'fake pdf')
 
