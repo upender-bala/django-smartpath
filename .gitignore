@@ -1,0 +1,47 @@
+# ----------------------
+# PYTHON
+# ----------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment (YOU HAVE newenv)
+newenv/
+env/
+venv/
+
+# Django
+db.sqlite3
+media/
+
+# ----------------------
+# BUILD FILES
+# ----------------------
+dist/
+build/
+*.egg-info/
+
+# ----------------------
+# NODE (your vscode-extension)
+# ----------------------
+node_modules/
+out/
+
+# ----------------------
+# VS CODE
+# ----------------------
+.vscode/
+
+# ----------------------
+# FILE TYPES
+# ----------------------
+*.log
+*.mp4
+*.vsix
+
+# ----------------------
+# OS FILES
+# ----------------------
+.DS_Store
+Thumbs.db

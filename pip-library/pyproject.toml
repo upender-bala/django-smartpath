@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "django-smartpath"
+version = "1.0.1"
+description = "Smart media/static file path insertion for Django — works in VS Code, PyCharm, Sublime Text"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "django-smartpath contributors", email = "hello@django-smartpath.dev"}
+]
+keywords = ["django", "static files", "media files", "developer tools", "ide", "vscode", "pycharm"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: Django",
+    "Framework :: Django :: 3.2",
+    "Framework :: Django :: 4.0",
+    "Framework :: Django :: 4.1",
+    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.0",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+]
+requires-python = ">=3.8"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-django",
+    "django>=3.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/django-smartpath/django-smartpath"
+Documentation = "https://django-smartpath.readthedocs.io/"
+Repository = "https://github.com/django-smartpath/django-smartpath"
+"Bug Tracker" = "https://github.com/django-smartpath/django-smartpath/issues"
+
+[project.scripts]
+django-smartpath = "django_smartpath.cli:main"
+
+[tool.setuptools.packages.find]
+exclude = ["tests*"]
+
+[tool.setuptools.package-data]
+django_smartpath = ["templatetags/*.py"]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "tests.test_settings"
+python_files = ["test_*.py"]
