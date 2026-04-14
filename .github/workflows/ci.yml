@@ -23,7 +23,7 @@ jobs:
         run: |
             pip install --upgrade pip
             pip install pytest
-            pip install -e pip-library
+            pip install -e ./pip-library
 
       - name: Run tests
         run: |
